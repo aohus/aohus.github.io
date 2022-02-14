@@ -137,6 +137,7 @@ while (($#)); do
   case $opt in
   -c | --config)
     _config="$2"
+    echo "$2"
     shift
     shift
     ;;
