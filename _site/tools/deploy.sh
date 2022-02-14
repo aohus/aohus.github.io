@@ -140,11 +140,11 @@ while (($#)); do
     shift
     shift
     ;;
-  --dry-run)
+  # --dry-run)
     # build & test, but not deploy
-    _opt_dry_run=true
-    shift
-    ;;
+    # _opt_dry_run=true
+    # shift
+    # ;;
   -h | --help)
     help
     exit 0
