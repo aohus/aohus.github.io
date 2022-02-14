@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Aohus</title>
   <subtitle>디스크립션은 어디에뜨나요?</subtitle>
-  <updated>2022-02-14T02:09:42+00:00</updated>
+  <updated>2022-02-14T13:01:14+00:00</updated>
   <author>
     <name>aohus</name>
     <uri>http://localhost:4000/</uri>
@@ -67,14 +67,10 @@ H3 - heading
 Paragraph
 
 I wandered lonely as a cloud
-
 That floats on high o’er vales and hills,
-
 When all at once I saw a crowd,
-
 A host, of golden daffodils;
-
-Beside ...
+Beside the ...
     </summary>
   
 
