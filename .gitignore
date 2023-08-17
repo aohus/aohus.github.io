@@ -4,3 +4,4 @@
 _site
 Gemfile.lock
 _posts_sample/
+run_dev.sh
