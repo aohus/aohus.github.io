@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [파이썬] 가변형, 불변형 객체에 따른 동작 방식
+title: \[파이썬\] 가변형, 불변형 객체에 따른 동작 방식
 subtitle:
 categories: python
 tags: ["call by object reference"]

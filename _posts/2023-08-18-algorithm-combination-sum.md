@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [알고리즘] 조합의 합
+title: \[알고리즘\] 조합의 합
 subtitle:
 categories: algorithm
 tags: []

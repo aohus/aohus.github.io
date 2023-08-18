@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [파이썬] 클래스 내부 객체들
+title: \[파이썬\] 클래스 내부 객체들
 subtitle: 클래스/인스턴스 변수, 클래스/인스턴스/스태틱 메소드는 무엇인가?
 categories: python
 tags:
