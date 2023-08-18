@@ -1,6 +1,6 @@
 ---
 layout: post
-title: \[파이썬\] 매직 메소드
+title: "[파이썬] 매직 메소드"
 subtitle:
 categories: python
 tags: ["magic method"]
