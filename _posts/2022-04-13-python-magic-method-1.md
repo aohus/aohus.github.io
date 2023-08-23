@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[파이썬] 매직 메소드"
+title: "[파이썬] 매직 메소드(1) __call__, __getattribute__"
 subtitle:
 categories: python
 tags: ["magic method"]
@@ -14,10 +14,14 @@ instance에서 접근 가능한 메소드와 변수를 보기 위해 'dir' 명�
 #임의의 인스턴스 이름 'instance'
 dir(instance)
 
->> ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__weakref__', '_name', '_price']
+>> ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__',
+'__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__',
+'__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__',
+'__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',
+'__str__', '__sub__', '__subclasshook__', '__weakref__', '_name', '_price']
 ```
 
-이 매직 메소드들은 파이썬 코드를 더 쉽고 효율적으로 구현할 수 있도록 도와주지만, 매직 메소드의 동작을 알지 못하는 사람(나..)에게는 코드를 해석하기 어렵게 만드는 요소이기도하다. 몇 가지 궁금했던 매직 메소드를 예시와 함께 소개한다.
+이 매직 메소드들은 파이썬 코드를 더 쉽고 효율적으로 구현할 수 있도록 도와주지만, 매직 메소드의 동작을 알지 못하는 사람(나..)에게는 코드를 해석하기 어렵게 만드는 요소이기도하다. 이번에는 '파이썬 클린코드'를 읽으며 마주친 매직 메소드를 예시와 함께 소개한다.
 
 ### `__call__`
 
@@ -117,5 +121,6 @@ s.data
 data 객체에 접근하셨습니다.
 ```
 
-reference
+#### reference
+
 [3.3. Special method names](https://docs.python.org/3/reference/datamodel.html#special-method-names)
