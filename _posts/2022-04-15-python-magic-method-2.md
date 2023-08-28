@@ -70,6 +70,17 @@ print(n+10)
 print(n.__add__(10))
 ```
 
+### `__getitem__`
+
+시퀀스 객체에서 \[\](대괄호)를 사용하면 실제로는 `__getitem__` 메서드를 호출하여 요소를 가져온다. 따라서 `__getitem__`을 직접 호출하여 요소를 가져와도 동일한 결과가 나온다.
+
+```python
+a=[10, 20, 30, 40]
+
+a[1] # 20
+a.__getitem__(1) # 20
+```
+
 #### reference
 
 [3.3. Special method names](https://docs.python.org/3/reference/datamodel.html#special-method-names)
