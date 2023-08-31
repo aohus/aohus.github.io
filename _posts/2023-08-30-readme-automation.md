@@ -11,27 +11,33 @@ tags: []
 [potados님의 블로그](https://blog.potados.com/dev/directory-listing-in-readme/)를 보고 차근히 따라하고, 제 환경에 맞춰 2%의 변화를 준 부분을 기록에 남깁니다. 
 제가 스크립트를 실행한 환경은 macOS 13.3.1 입니다.
 
-# 파일 목차(링크) markdown 형식으로 생성하기(tree 와 gsed 이용)
-1) 파일 목차를 만들고 싶은 프로젝트 폴더에서 tree 명령어를 입력해봅니다. 
+
+## 파일 목차(링크) markdown 형식으로 생성하기
+- tree 와 gsed 이용
+
+### 1) 파일 목차를 만들고 싶은 프로젝트 폴더에서 tree 명령어를 입력해봅니다. 
+
 `command not found: tree`가 뜬다면 설치가 되지 않은 것이니 터미널에 `brew install tree` 명령으로 설치해줍니다. 
 
 ```shell
 $ tree
 ```
 
-![](../assets/images/posts/2023-08-30-blog.png)
+![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2023-08-30-blog.png)
 그럼 현재 프로젝트의 트리를 볼 수 있습니다. 하지만 우리가 원하는 것은 프로젝트 목차와 링크!입니다. 제목만 보고 글로 바로 가고 싶거든요. 
 
-2) 원하는 형식으로 만들어주기 위해 gsed를 이용해 text를 변환합니다. 
+### 2) 원하는 형식으로 만들어주기 위해 gsed를 이용해 text를 변환합니다. 
+
 `gsed` 가 없을 경우 역시 터미널에 `brew install gnu-sed` 명령으로 설치해줍니다.
 
 ```shell
 $ tree -tf --noreport -I '*~' --charset ascii $1 | gsed -e '1d' -e 's/    /   |/g' -e 's/| \+/  /g' -e 's/[|`]-\+/ */g' -e 's:\(* \)\(\(.*/\)\([^/]\+\)\):\1[\4](\2):g' | grep -vE "img|update-readme"
 ```
 위 명령이 잘 실행되면 아래와 같이 변환이 됩니다.
-![](../assets/images/posts/2023-08-30-blog2.png)
+![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2023-08-30-blog2.png)
 
 gsed 명령을 한 줄 씩 보면 아래와 같습니다. 
+
 ```shell
 gsed -e 'id'                                              # . 으로 나오는 첫 줄을 삭제합니다.
 gsed -e 's/    /   |/g'                                   # 
@@ -40,8 +46,10 @@ gsed -e 's/[|`]-\+/ */g'                                  # '|--' 를 '*'로 대
 gsed -e 's:\(* \)\(\(.*/\)\([^/]\+\)\):\1[\4](\2):g'      # 링크를 걸어줍니다
 ```
 
-3) README 템플릿을 만듭니다.
+### 3) README 템플릿을 만듭니다.
+
 root directory에 아래와 같이 템플릿 파일을 만들고 `.readme_template.md` 으로 저장했습니다. `__PROJECT_TREE__` 부분이 파일 목차로 대치될 부분입니다. 다른 내용은 자유롭게 작성해주시면 됩니다. 
+
 ```markdown
 # TIL
 
@@ -50,8 +58,10 @@ root directory에 아래와 같이 템플릿 파일을 만들고 `.readme_templa
 __PROJECT_TREE__
 ```
 
-4) 2)번에서 변환한 텍스트 결과를 `__PROJECT_TREE__` 부분에 입력해주는 스크립트를 적성해봅시다.
+### 4) 2)번에서 변환한 텍스트 결과를 `__PROJECT_TREE__` 부분에 입력해주는 스크립트를 적성해봅시다.
+
 `update-readme` 파일을 아래와 같이 생성합니다.
+
 ```shell
 #!/bin/bash
 
@@ -90,18 +100,21 @@ function generate_readme() {
 cd "$(dirname "$0")" || exit 1
 generate_project_tree . | generate_readme .
 ```
-복잡해보이지만 
-generate_project_tree는 
+
+`update-readme` 가 어떤 일을 하는지 `generate_project_tree`, `generate_readme`를 보며 알아봅시다. 
+
+**generate_project_tree**
 - mac에서 SED 변수에 gsed 를 저장해줍니다.
 - 다음 2)에서 실행한 것과 동일한 코드를 실행하여 동일한 결과(markdown tree & link)를 얻습니다.
 generate_project_tree 의 output은 파이프라인 '|'을 통해 generate_readme로 전해집니다. 
 
-generate_readme는 
+**generate_readme**
 - perl 을 이용해 .readme_template.md의 `__PROJECT_TREE__`부분을 generate_project_tree 의 output으로 대치하여 README.md에 저장합니다.
 - generate_project_tree 의 output은 `cat`으로 읽어옵니다. 
 
 
-5) git hook 
+### 5) git hook 
+
 다 왔습니다!! 이제 git에 commit하면 update-readme 파일을 실행하도록 하는 hook을 등록합니다. 
 프로젝트의 `.git/hooks`에 `pre-commit` 파일을 아래와 같이 생성하고 `chmod +x pre-commit`으로 실행 권한을 줍니다. 
 

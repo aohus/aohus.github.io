@@ -81,6 +81,19 @@ a[1] # 20
 a.__getitem__(1) # 20
 ```
 
+### `__slots__`
+인스턴스는 자유롭게 속성을 추가할 수 있지만 특정 속성만 허용하고 다른 속성은 제한하고 싶을 수도 있다. 이때 `__slots__`에 허용할 속성 이름을 리스트로 넣어주면 된다. 
+
+```python
+class Person:
+	__slots__ = ['name', 'age']
+
+maria = Person()
+maria.name = '마리아'
+maria.age = 20 
+maria.address = '서울시 송파구' # AttributeError: 'Person' object has no attribute 'address'
+```
+
 #### reference
 
 [3.3. Special method names](https://docs.python.org/3/reference/datamodel.html#special-method-names)
