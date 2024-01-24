@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[파이썬] 매직 메소드(2)"
+title: "[Python] 매직 메소드(2)"
 subtitle:
-categories: python
+categories: Python
 tags: ["magic method"]
 ---
 

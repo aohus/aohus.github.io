@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[git] README에 파일 목차와 링크 생성하기(file tree)"
+title: "[Git] README에 파일 목차와 링크 생성하기(file tree)"
 subtitle:
-categories: git
+categories: Git
 tags: []
 ---
 

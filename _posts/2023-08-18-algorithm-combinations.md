@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[알고리즘] 조합"
+title: "[Algorithm] 조합"
 subtitle:
 categories: algorithm
 tags: []

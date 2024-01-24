@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[파이썬] generator 재사용하는 방법(itertools.tee() 이용한 복제)"
+title: "[Python] generator 재사용하는 방법(itertools.tee() 이용한 복제)"
 subtitle:
-categories: python
+categories: Python
 tags: ["generator", "itertools.tee"]
 ---
 

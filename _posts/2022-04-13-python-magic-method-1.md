@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[파이썬] 매직 메소드(1) __call__, __getattribute__"
+title: "[Python] 매직 메소드(1) __call__, __getattribute__"
 subtitle:
-categories: python
+categories: Python
 tags: ["magic method"]
 ---
 
