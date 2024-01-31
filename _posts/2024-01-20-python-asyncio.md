@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Python] 파이썬 비동기 라이브러리 Asyncio(1)"
+title: "[Python] 파이썬 비동기 라이브러리 Asyncio"
 subtitle:
 categories: Python, 비동기 프로그래밍
 tags: []
@@ -132,7 +132,7 @@ except StopIteration as e: # -------------- 2)
 2) 코루틴의 끝점: 코루틴이 반환할 때 `StopIteration`이라는 특별한 예외가 발생합니다. 예외의 `value` 속성을 통해 코루틴의 반환값을 확인합니다. 
 
 #### `await`: 코루틴 완료까지 blocking
-`await` 키워드는 항상 매개변수 하나를 필요로합니다. 허용되는 `type`은 `awaitable` 로 불리며 다음 중 하나여야합니다. 
+`await` 키워드는 항상 매개변수 하나를 필요로합니다. 허용되는 `type`은 `awaitable` 로 불리며 다음 중 하나여야합니다. (Awaitable이란? 다음 글을 참고)
 - 코루틴(즉, async def 함수의 반환 값)
 - `__await__()`라는 특별 메서드를 구현한 모든 객체. 이 메서드는 반드시 이터레이터를 반환해야합니다. (이 부분은 다루지 않습니다.)
 
