@@ -2,7 +2,7 @@
 layout: post
 title: "[Python] Awaitable 객체란?(coroutine, Task, Future)"
 subtitle:
-categories: Python, 비동기 프로그래밍
+categories: Python 비동기프로그래밍
 tags: []
 ---
 

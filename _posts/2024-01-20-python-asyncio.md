@@ -2,7 +2,7 @@
 layout: post
 title: "[Python] 파이썬 비동기 라이브러리 Asyncio"
 subtitle:
-categories: Python, 비동기 프로그래밍
+categories: Python 비동기프로그래밍
 tags: []
 ---
 
