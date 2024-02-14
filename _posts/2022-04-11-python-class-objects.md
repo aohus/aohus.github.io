@@ -3,14 +3,7 @@ layout: post
 title: "[Python] 클래스 내부 객체들"
 subtitle: 클래스/인스턴스 변수, 클래스/인스턴스/스태틱 메소드는 무엇인가?
 categories: Python
-tags:
-  [
-    "class variable",
-    "instance variable",
-    "class method",
-    "instance method",
-    "static method",
-  ]
+tags: []
 ---
 
 ### 예제 코드

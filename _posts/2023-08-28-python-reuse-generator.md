@@ -3,7 +3,7 @@ layout: post
 title: "[Python] generator 재사용하는 방법(itertools.tee() 이용한 복제)"
 subtitle:
 categories: Python
-tags: ["generator", "itertools.tee"]
+tags: []
 ---
 
 ### generator

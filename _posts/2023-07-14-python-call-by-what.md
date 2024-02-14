@@ -3,7 +3,7 @@ layout: post
 title: "[Python] 가변형, 불변형 객체에 따른 동작 방식"
 subtitle:
 categories: Python
-tags: ["call by object reference"]
+tags: []
 ---
 
 ### Call by value ? Call by reference ?

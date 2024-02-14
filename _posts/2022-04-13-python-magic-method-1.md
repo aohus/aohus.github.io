@@ -3,7 +3,7 @@ layout: post
 title: "[Python] 매직 메소드(1) __call__, __getattribute__"
 subtitle:
 categories: Python
-tags: ["magic method"]
+tags: []
 ---
 
 클래스 안에 정의된 함수를 '메소드'라고 부른다. 메소드 중에서 `__`로 시작해서 `__`로 끝나는 메소드들 이 있는데, 이를 매직 메소드 또는 특별 메소드라고 부른다. 가장 유명한 매직 메소드는 `__init__`이라는 생성자이며, 생성자는 어떤 클래스의 인스턴스가 생성될 때 파이썬 인터프리터에 의해 자동으로 호출되는 메소드이다.

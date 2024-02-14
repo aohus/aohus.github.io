@@ -3,7 +3,7 @@ layout: post
 title: "[Python] 매직 메소드(2)"
 subtitle:
 categories: Python
-tags: ["magic method"]
+tags: []
 ---
 
 클래스 안에 정의된 함수를 '메소드'라고 부른다. 메소드 중에서 `__`로 시작해서 `__`로 끝나는 메소드들 이 있는데, 이를 매직 메소드 또는 특별 메소드라고 부른다.
