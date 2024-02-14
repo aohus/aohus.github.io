@@ -7,7 +7,7 @@ tags: ["Virtumall"]
 ---
 
 부하테스트를 하던 중 다음과 같은 에러와 함께 서비스가 중단되었습니다.  
-`Worker (pid:12) was sent SIGKILL! Perhaps out of memory?`  
+> `Worker (pid:12) was sent SIGKILL! Perhaps out of memory?`  
 
 ![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2024-02-01-ec2-01.png?raw=true)
 
@@ -27,18 +27,19 @@ tags: ["Virtumall"]
 
 3. 스왑메모리 사용  
 더 큰 메모리를 사용하는 것이 여의치 않다면 시도해볼 수 있는 것은 스왑메모리를 사용하는 것입니다. 스왑 영역이 없다는 것은 메모리가 부족해지면 시스템이 디스크를 메모리처럼 사용할 수 없다는 것을 의미합니다. 이러한 상황에서 발생할 수 있는 문제들은 다음과 같습니다:  
-
-1) **메모리 부족 (Out of Memory, OOM)**
-    - 메모리 고갈: 애플리케이션 또는 프로세스가 사용 가능한 메모리를 모두 소진할 경우, 시스템은 메모리 부족 상태에 빠질 수 있다. 스왑 영역이 없으면, 이 상황은 더욱 심각해질 수 있습니다.
-    - OOM Killer 활성화: 리눅스 시스템에서는 메모리가 부족해지면 OOM Killer가 활성화되어 메모리를 많이 사용하는 프로세스를 강제 종료시킬 수 있습니다. 이 과정은 CPU 자원을 추가로 사용합니다.
-2) **CPU 리소스 경쟁**
-    - 리소스 경쟁: 메모리 부족 상황에서 시스템은 메모리 관리에 더 많은 CPU 자원을 할당하려고 할 수 있으며, 이는 CPU 사용률 증가로 이어질 수 있습니다.
-3) **성능 저하**
+  
+1) **메모리 부족 (Out of Memory, OOM)**  
+    - 메모리 고갈: 애플리케이션 또는 프로세스가 사용 가능한 메모리를 모두 소진할 경우, 시스템은 메모리 부족 상태에 빠질 수 있다. 스왑 영역이 없으면, 이 상황은 더욱 심각해질 수 있습니다.  
+    - OOM Killer 활성화: 리눅스 시스템에서는 메모리가 부족해지면 OOM Killer가 활성화되어 메모리를 많이 사용하는 프로세스를 강제 종료시킬 수 있습니다. 이 과정은 CPU 자원을 추가로 사용합니다.  
+2) **CPU 리소스 경쟁**  
+    - 리소스 경쟁: 메모리 부족 상황에서 시스템은 메모리 관리에 더 많은 CPU 자원을 할당하려고 할 수 있으며, 이는 CPU 사용률 증가로 이어질 수 있습니다.  
+3) **성능 저하**  
     - 페이징: 메모리가 부족한 상태에서는 시스템이 페이징을 더 자주 수행하려고 할 수 있다. 이는 CPU에 추가 부담을 줄 수 있습니다.
 
 
 ### 스왑 메모리 할당하기  
 - 우선 아래 명령으로 swapfile 용량을(2G) 확보하고 활성화 해줍니다. 스왑 메모리는 메모리 용량의 2배까지 설정할 수 있습니다. 현재 free-tier로 사용하는 t2.micro의 메모리가 1GiB 이기에 스왑 메모리는 2GiB로 잡아줍니다.  
+  
 ```bash  
 $ sudo fallocate -l 2G /swapfile  
 $ sudo mkswap /swapfile  
@@ -58,9 +59,9 @@ $ sudo swapon /swapfile
 
 
 **Virtumall 프로젝트**  
-https://github.com/f-lab-edu/virtu-mall
+<https://github.com/f-lab-edu/virtu-mall>  
 
 
 ## References  
-https://nan-sso-gong.tistory.com/34 
-https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/burstable-credits-baseline-concepts.html
+<https://nan-sso-gong.tistory.com/34>
+<https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/burstable-credits-baseline-concepts.html>
