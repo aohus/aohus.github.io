@@ -9,13 +9,13 @@ tags: ["Virtumall"]
 부하테스트를 하던 중 다음과 같은 에러와 함께 서비스가 중단되었습니다.  
 `Worker (pid:12) was sent SIGKILL! Perhaps out of memory?`  
 
-![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2024-02-01-ec2-01.png)
+![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2024-02-01-ec2-01.png?raw=true)
 
 
 저는 EC2 free-tier로 제공되는 인스턴스를 사용 중인데 free-tier로 제공되는 t2.micro는 1개의 CPU에 memory 1GiB를 제공하고 스왑메모리 공간도 따로 할당되어있지 않았습니다. 
 동시에 많은 요청이 Gunicorn worker에 쌓이다가 메모리 부족으로 worker process가 죽어버린 것으로 보입니다. 실제 response times의 중위값도 갈수록 길어지고 있어, 요청이 바로 응답되지 않고 대기 중인 것을 알 수 있습니다.  
 
-![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2024-02-01-ec2-02.png)
+![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2024-02-01-ec2-02.png?raw=true)
 
 
 ### 해결 방법
@@ -49,7 +49,7 @@ $ sudo swapon /swapfile
 ```  
 
 - `top` 명령으로 확인해봅니다. 0이었던 swap memory가 2048로 늘어난 것을 볼 수 있습니다.  
-![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2024-02-01-ec2-03.png)
+![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2024-02-01-ec2-03.png?raw=true)
 
 
 ### 결과  
