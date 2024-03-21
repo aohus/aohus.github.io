@@ -23,7 +23,7 @@ sudo vi /etc/security/limits.conf
 ```  
 
 2. 파일 끝에 다음 라인을 추가하여 파일 디스크립터의 제한을 설정하고 저장합니다.  
-```conf
+```conf  
 <사용자_이름> soft nofile <새로운_소프트_리미트>
 <사용자_이름> hard nofile <새로운_하드_리미트>
 ```  
@@ -39,9 +39,9 @@ sudo vi /etc/security/limits.conf
 
 #### nginx 설정 변경  
 1. `nginx.conf` 파일의 worker_connections 옵션을 변경해줍니다.  
-```conf
+```conf  
 worker_connections <max_connection>
-```
+```  
 
 2. 변경 사항을 적용하기 위해 nginx를 재실행해줍니다.  
 
