@@ -23,7 +23,7 @@ tags: []
 - Connection Pool은 WAS 내부에 내장되어 존재하는 경우가 많다.
 - 하지만 경우에 따라, Connection Pool은 별도의 서버나 서비스로 구성될 수 있다. 이러한 구성은 대규모 시스템이나 분산 시스템에서 볼 수 있다. 여기서 Connection Pool은 중앙 집중식 서비스로 작동하며, 여러 애플리케이션에서 공유할 수 있다.
 
-![img](../assets/images/posts/2023-07-23-connectionpool.png)
+![img](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2023-07-23-connectionpool.png?raw=true)
 
 
 ### 커넥션 풀(DBCP)의 유의 사항

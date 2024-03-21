@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Python] 파이썬 클래스 상속ㄴ"
+title: "[Python] 파이썬 클래스 상속"
 subtitle:
 categories: Python
 tags: ["파이썬 코딩 도장"]
