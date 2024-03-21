@@ -3,7 +3,7 @@ layout: post
 title: "[architecture] 대규모 시스템 설계 기초"
 subtitle:
 categories: architecture
-tags: ["대규모 시스템 설게 기초"]
+tags: ["대규모 시스템 설계 기초"]
 ---
 
 # CHAPTER1. 사용자 수에 따른 규모 확장성  
