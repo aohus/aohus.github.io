@@ -11,13 +11,13 @@ tags: []
 기본적으로 Django는 내장된 Connection Pooling 을 제공하지 않습니다. Django의 ORM은 각 요청에 대해 데이터베이스 연결을 열고 요청이 완료되면 연결을 닫습니다. 즉, Django는 "long-lived" 연결을 유지하지 않고, 연결을 필요할 때마다 생성하고 해제한다는 것입니다. 그렇다고 연결 오버헤드를 방치하는 것은 아닙니다. Persistent Connection 방식을 적용하여 DB 쿼리를 처음 만들 때 DB 커넥션을 열고 이 연결을 열린 상태로 유지하고 후속 요청에서 이 연결을 재사용합니다.
 
 ### Django 의 db connection 최적화
-Django의 db connection을 최적화 하는 방식은 크게 두 가지가 있습니다. Django에 내장된 Persistent Connection 방식을 사용하는 것과 외부 라이브러리를 통해 [[connection pool|Connection Pooling]]을 사용하는 것입니다. 
+Django의 db connection을 최적화 하는 방식은 크게 두 가지가 있습니다. Django에 내장된 Persistent Connection 방식을 사용하는 것과 외부 라이브러리를 통해 Connection Pooling을 사용하는 것입니다. 
 
 1. **persistent connection**
 	Django의 `persistent-db-connections` 설정을 활성화하여 Django의 기본 데이터베이스 연결을 재사용할 수도 있습니다. 이는 Django 1.6부터 도입된 기능입니다. `persistent connection`은 전통적인 Connection Pooling과는 다르며, `CONN_MAX_AGE` 커넥션의 재사용 시간을 결정하는 것입니다.
 
 2. **connection pooling**
-	(connection pool에 대한 내용은 다음 포스팅을 참고해주세요! >> [connection pool 이란?]()  )
+	(connection pool에 대한 내용은 다음 포스팅을 참고해주세요! >> [connection pool 이란?](https://aohus.github.io/database/2023/07/23/connection-pool.html))
 	Django에서 [[connection pool|Connection Pooling]]을 사용하려면, 외부 라이브러리를 활용해야 합니다. `django-db-connection-pool`은 Django 애플리케이션에 대해 Connection Pooling을 제공하는 라이브러리입니다. 이 라이브러리는 `SQLAlchemy`의 연결 풀 기능을 사용하여 작동합니다.
 
 ### Persistent Connection
@@ -40,4 +40,4 @@ DATABASES = {
 ## References
 [Django에서 DB Connection 관리](https://seungho-jeong.github.io/technology/computer-science/django-db-connections/)
 [DB Connection을 관리하는 방법](https://americanopeople.tistory.com/260)
-https://docs.djangoproject.com/en/5.0/ref/databases/#persistent-database-connections
+<https://docs.djangoproject.com/en/5.0/ref/databases/#persistent-database-connections>
