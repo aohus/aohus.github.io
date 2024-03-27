@@ -1,10 +1,16 @@
 ---
 layout: post
-title: "[Data Engineering] 스트림 프로세싱(실시간 데이터 처리) 패턴들"
+title: "[Data Engineering] 스트림 프로세싱(실시간 데이터 처리) - 1.스트림 프로세싱 패턴들"
 subtitle:
 categories: DataEngineering
 tags: ["클라우드 네이티브 애플리케이션 디자인 패턴"]
 ---
+
+> ### 스트림 프로세싱 관련 글
+> **[1.스트림 프로세싱 패턴들](https://aohus.github.io/dataengineering/2024/02/29/stream-processing-1.html)**
+> [2.스트림 프로세싱의 확장성을 확보하고 성능을 최적화하기 위한 패턴들](https://aohus.github.io/dataengineering/2024/02/29/stream-processing-2.html)
+> [3.스트림 프로세싱 서버가 터져도 살아남는 법 (aka 신뢰성 확보)](https://aohus.github.io/dataengineering/2024/02/29/stream-processing-3.html)
+
 
 데이터의 홍수 속 실시간 데이터 처리는 다양한 애플리케이션과 의사결정의 도구로 사용되고 있습니다.  
 오늘은 클라우드 네이티브 애플리케이션에서의 스트림 프로세싱에 대해 알아보고 상황별로 적용할 수 있는 스트림 프로세싱 패턴들에 대해 알아보겠습니다.   
