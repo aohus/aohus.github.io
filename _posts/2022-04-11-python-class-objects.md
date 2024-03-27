@@ -162,4 +162,4 @@ class Car():
 ```
 
 referece
-[# 파이썬 – OOP Part 4. 클래스 메소드와 스태틱 메소드 (Class Method and Static Method)](https://schoolofweb.net/blog/posts/%ed%8c%8c%ec%9d%b4%ec%8d%ac-oop-part-4-%ed%81%b4%eb%9e%98%ec%8a%a4-%eb%a9%94%ec%86%8c%eb%93%9c%ec%99%80-%ec%8a%a4%ed%83%9c%ed%8b%b1-%eb%a9%94%ec%86%8c%eb%93%9c-class-method-and-static-method/)
+[파이썬 – OOP Part 4. 클래스 메소드와 스태틱 메소드 (Class Method and Static Method)](https://schoolofweb.net/blog/posts/%ed%8c%8c%ec%9d%b4%ec%8d%ac-oop-part-4-%ed%81%b4%eb%9e%98%ec%8a%a4-%eb%a9%94%ec%86%8c%eb%93%9c%ec%99%80-%ec%8a%a4%ed%83%9c%ed%8b%b1-%eb%a9%94%ec%86%8c%eb%93%9c-class-method-and-static-method/)
