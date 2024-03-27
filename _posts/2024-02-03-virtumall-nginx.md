@@ -3,7 +3,7 @@ layout: post
 title: "[Virtumall #1] 부하테스트 중 일어난 일(1) - nginx worker_connections are not enough"
 subtitle:
 categories: 프로젝트 실험
-tags: ["Virtumall"]
+tags: ["Project Virtumall"]
 ---
 
 

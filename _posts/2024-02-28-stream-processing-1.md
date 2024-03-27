@@ -2,7 +2,7 @@
 layout: post
 title: "스트림 프로세싱(실시간 데이터 처리) 패턴들"
 subtitle:
-categories: Data Engineering
+categories: DataEngineering
 tags: ["클라우드 네이티브 애플리케이션 디자인 패턴"]
 ---
 

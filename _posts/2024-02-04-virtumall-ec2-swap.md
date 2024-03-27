@@ -3,7 +3,7 @@ layout: post
 title: "[Virtumall #2] 부하테스트 중 일어난 일(2) - 스왑메모리로 ec2 free-tier 메모리 부족 해결하기"
 subtitle:
 categories: 프로젝트 실험
-tags: ["Virtumall"]
+tags: ["Project Virtumall"]
 ---
 
 부하테스트를 하던 중 다음과 같은 에러와 함께 서비스가 중단되었습니다.  
