@@ -32,7 +32,7 @@
     }
 
     span {
-      @include relative-font-size(0.8);
+      @include relative-font-size(1.0);
       display: inline-block;
       border-radius: 10px;
       align-self: center;

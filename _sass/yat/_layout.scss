@@ -251,6 +251,7 @@ html {
   -ms-flex: none; /* <-- Fix IE footer issue */
   padding: $spacing-unit * 2 0;
   padding-top: 72px;
+  line-height: 1.8;
 }
 
 .page-heading {
@@ -392,6 +393,7 @@ html {
 
     .post-title {
       margin-bottom: 6px;
+      line-height: 1.3;
     }
 
     .post-subtitle {
@@ -405,6 +407,7 @@ html {
   }
 
   .post-content {
+    @include relative-font-size(1.15);
     margin-bottom: $spacing-unit;
     overflow-wrap: normal;
     word-wrap: normal;
