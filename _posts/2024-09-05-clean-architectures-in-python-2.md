@@ -23,7 +23,7 @@ tags: []
 
 
 **이전 글**
-> [\[Architecture\] 파이썬으로 구현하는 클린 아키텍처 (1)클린 아키텍처란?](https://aohus.github.io/architecture/clean-architectures-in-python-1/)
+> [\[Architecture\] 파이썬으로 구현하는 클린 아키텍처 (1)클린 아키텍처란?](https://aohus.github.io/architecture/2024/09/05/clean-architectures-in-python-1.html/)
 
 ## Reference  
 [Clean Architecture in Python](https://leanpub.com/clean-architectures-in-python)
