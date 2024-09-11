@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kubernetes] 쿠네티스 ReplicaSet"
+title: "[Kubernetes] Control Plane의 ControllerManager"
 subtitle:
 categories: Kubernetes
 tags: []
@@ -10,12 +10,8 @@ tags: []
 
 ReplicaSet의 내부 동작과 파드를 관리하는 방식을 코드 레벨에서 살펴보면, 핵심적인 구성 요소와 로직이 쿠버네티스 코드베이스의 kubernetes/kubernetes 저장소 내에 있습니다. 주요 파일은 pkg/controller/replicaset 디렉토리에 있으며, ReplicaSet의 구현체는 Go 언어로 작성되어 있습니다.
 
-1. ReplicaSet 컨트롤러 개요
-ReplicaSet의 핵심적인 컨트롤러는 controller manager에 의해 실행되며, ReplicaSet의 상태를 주기적으로 모니터링하고, 주어진 스펙과 실제 파드 상태를 비교해 차이를 보정합니다. 그 핵심 로직은 아래와 같은 작업을 수행합니다:
-
-현재 클러스터에 존재하는 파드의 수를 확인
-ReplicaSet의 spec.replicas에서 설정된 파드 개수와 비교
-부족하면 새로운 파드를 생성하고, 초과하면 파드를 삭제
+## 전체 그림
+![2024-09-06-kubernetes-controller-manager.png](https://github.com/aohus/aohus.github.io/blob/main/assets/images/posts/2024-09-06-kubernetes-controller-manager-tmp.png?raw=true)
 
 
 ## Reference  
